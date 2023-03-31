@@ -62,7 +62,7 @@ const AddToDo = (props) => {
         return 'Undefined Title';
       }
     }
-  }, [openMode]);
+  }, [openMode, selectedToDo]);
 
   const onSubmit = useCallback(async () => {
     let apiHeaders = {
@@ -113,7 +113,7 @@ const AddToDo = (props) => {
     if (openMode === EDIT_MODE) {
       onSubmitEdit();
     }
-  }, [openMode, user, toDoData, selectedToDo]);
+  }, [openMode, user, toDoData, selectedToDo, dispatch, onSubmitEdit]);
   return (
     <Paper elevation={6} sx={sxAddToDo.paper}>
       <Typography variant="h5" gutterBottom sx={{ color: 'white' }}>

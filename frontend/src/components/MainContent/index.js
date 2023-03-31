@@ -16,7 +16,7 @@ function MainContent() {
     } else if (pathname === '/' && user) {
       navigate('/home');
     }
-  }, [location, user]);
+  }, [pathname, user, navigate]);
   return (
     <Box component="main" sx={sxMainContent.root}>
       <MainRouter />

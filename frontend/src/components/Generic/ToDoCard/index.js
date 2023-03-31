@@ -35,7 +35,7 @@ const ToDoCard = (props) => {
       }
     });
     dispatch(setToDos(listResponse.data));
-  }, []);
+  }, [aTodo, dispatch, user]);
 
   const onCheckItemDone = useCallback(
     async (checked) => {
@@ -56,7 +56,7 @@ const ToDoCard = (props) => {
       });
       dispatch(setToDos(listResponse.data));
     },
-    [aTodo, user]
+    [aTodo, user, dispatch]
   );
 
   return (

@@ -10,6 +10,7 @@ const app = express()
 dotenv.config()
 
 app.use(express.json())
+
 //enable app to use cors
 app.use(cors())
 //enable app to use morgan
